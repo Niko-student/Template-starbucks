@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+header {
+    background-color: var(--color-neutral-1); /* cor do fundo */
+    padding: 12px 4%; /* padding */
+    position: sticky; /* fazer o header ficar fixo mesmo scrollando */
+    top: 0;
+    z-index: 1;
+
+    .navbar{ /* CSS do .navbar dentro do header */
+        display: flex; /* Display flex */
+        justify-content: space-between; /* Deixar um espaço entre eles */
+        align-items: center;
+
+        .logo{
+            width: 180px;
+        }
+
+        ul {
+            display: none; /* não aparecer */
+            list-style: none; /* Sem estilo de lista */
+            flex-direction: column; /* Como o flex vai se comportar */
+            gap: 0.5rem; /* espaço entre os elementos */
+            width: 100%; /* 100% da largura */
+            position: absolute; 
+            top: 80px;
+            background-color: var(--color-neutral-1);
+            left: 0;
+            padding: 1rem;
+
+           
+
+            &.show { /* O & diz meio que ele esta se referindo a ele mesmo dizendo que quando ele tiver essa caracteristica */
+                display: flex;
+            }
+
+            li {
+                text-align: center;
+
+                a {
+                    color: var(--color-neutral-8);
+                    text-decoration: none;
+                    font-size: 1rem;
+                    font-weight: 500;
+
+                    &:hover {
+                        color: var(--color-primary-1);
+                        border-bottom: 1px solid var(--color-primary-1);
+                    }
+                }
+            }
+            .btn-default {
+                display: none;
+            }
+        }
+
+        .btn-default {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    header {
+        .navbar{
+            .btn-mobile {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                position: static;
+                gap: 1rem;
+                width: auto;
+                padding: 0;
+            }
+
+            .btn-default {
+                display: block;
+            }
+        }
+    }
+}
