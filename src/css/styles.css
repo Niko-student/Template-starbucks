@@ -165,7 +165,7 @@ a.btn {
     flex-direction: column;
     align-items: center;
     background-color: var(--color-primary-1);
-    background-image: url('../images/about/bg-about.png');
+    background-image: url('/src/images/about/bg-about.png');
     min-height: calc(100vh - 96px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.21);
     border-radius: 32px;
@@ -237,7 +237,7 @@ a.btn {
     align-items: center;
     justify-content: center;
     background-color: var(--color-primary-1);
-    background-image: url('../images/products/background.png');
+    background-image: url('/src/images/products/background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
